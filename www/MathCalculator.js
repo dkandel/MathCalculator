@@ -1,5 +1,5 @@
-import exec from 'cordova/exec';
+var exec = require('cordova/exec');
 
-export function add(arg0, success, error) {
+exports.add = function (arg0, success, error) {
     exec(success, error, 'MathCalculator', 'add', [arg0]);
-}
+};
